@@ -71,7 +71,7 @@ const setting = JSON.parse(fs.readFileSync('./apikey.json'))
 limitawal = '100'
 botname = 'ZIM BOT INC'
 wm = 'ZIM BOT INC'
-global.reactmoji = '🇿🇼'
+global.reactmoji = 'KE'
 limitCount = setting.limit
 
 //read database
@@ -132,7 +132,7 @@ module.exports = ZimBotInc = async (ZimBotInc, m, chatUpdate, store) => {
         const isWelcome = m.isGroup ? dripswelcome.includes(m.chat) : false
 //zim bot inc
 
-const timuu = moment.tz('Africa/Harare').format('HH:mm:ss')
+const timuu = moment.tz('Africa/Nairobi').format('HH:mm:ss')
 const hariRaya = new Date('Apr 02, 2022 01:45:00')
 const sekarang = new Date().getTime();
 const Selisih = hariRaya - sekarang;
@@ -237,7 +237,7 @@ switch(hari) {
     if (isCmd) msgFilter.addFilter(from)
     
 // TIME 
-const time2 = moment().tz('Africa/Harare').format('HH:mm:ss')
+const time2 = moment().tz('Africa/Nairobi').format('HH:mm:ss')
 if(time2 < "23:59:00"){
 var ucapannya2 = `Good Night 🌒`
 }
@@ -257,8 +257,8 @@ if(time2 < "05:00:00"){
 var ucapannya2 = `Good morning 🌅`
 }
 
-global.botdev = ['27634090203','447441437150']
-global.bothelp = ['918188019676']
+global.botdev = ['254735847430']
+global.bothelp = ['254735847430']
 
 //function rpg
    const { 
@@ -426,7 +426,7 @@ randek = jsonDrips[randIndex];
             if (typeof setting !== 'object') global.db.data.settings[botNumber] = {}
 	    if (setting) {
 		if (!isNumber(setting.status)) setting.status = 0
-		if (!('autobio' in setting)) setting.autobio = false
+		if (!('autobio' in setting)) setting.autobio = true
 		if (!('templateImage' in setting)) setting.templateImage = false
 		if (!('templateLocation' in setting)) setting.templateLocation = false
 		if (!('templateGif' in setting)) setting.templateGif = true
@@ -435,8 +435,8 @@ randek = jsonDrips[randIndex];
         if (!('templateDoc' in setting)) setting.templateDoc = false
 	    } else global.db.data.settings[botNumber] = {
 		status: 0,
-		autobio: false,
-		templateImage: false,
+		autobio: true,
+		templateImage: true,
 		templateLocation: false,
 		templateGif: true,
 		templateMsg: false,
@@ -485,7 +485,7 @@ randek = jsonDrips[randIndex];
     }, 
     {
       scheduled: true,
-      timezone: 'Africa/Harare'
+      timezone: 'Africa/Nairobi'
      }
     )
 //thum
@@ -638,7 +638,7 @@ ZimBotInc.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4' , ptt: true
 	    let setting = global.db.data.settings[botNumber]
 	    if (new Date() * 1 - setting.status > 1000) {
 		let uptime = await runtime(process.uptime())
-		await ZimBotInc.setStatus(`ZIM-BOT-INC| BOT ONLINE: ${runtime(uptime)}`)
+		await ZimBotInc.setStatus(`JOSH-BOT-INC| BROTHER BENARD DONT CALL ME | BOT ONLINE: ${runtime(uptime)}`)
 		setting.status = new Date() * 1
 	    }
 	}
